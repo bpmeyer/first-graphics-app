@@ -2,13 +2,15 @@
 
 {% import "_modules/link/link.nunjucks" as link %}
 
-{% block headline %}My Headline Will Go Here{% endblock %}
-{% block byline %}By Brandon Meyer{% endblock %}
+{% block headline %}South L.A. neighborhood grapples with a wave of violence{% endblock %}
+{% block byline %}By <a href="http://www.firstgraphicsapp.org">First Graphics App</a>{% endblock %}
 {% block pubdate %}
   <time datetime="2018-03-18" pubdate>March 10, 2018</time>
 {% endblock %}
 
 {% block content %}
+<h3>One Corner, Four Killings</h3>
+<div id="map"></div>
 <h3>South LA Neighborhood Stands Apart</h3>
 <p>Harvard Park's 2016 homicide total was its highest in at least 15 years despite a downward trend in killings across L.A. County.</p>
 
@@ -39,5 +41,6 @@
 {% block scripts %}
 <script>
 var annualTotals = {% include '_data/annual_totals.json' %};
+var homicides = {% include "_data/harvard_park_homicides.json" %}
 </script>
 {% endblock %}
